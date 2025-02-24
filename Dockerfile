@@ -68,4 +68,4 @@ RUN wget https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcn
 
 WORKDIR /root/DynaSLAM
 RUN apt-get update  && \
-    export TF_CPP_MIN_LOG_LEVEL=2
+    export TF_CPP_MIN_LOG_LEVEL=0

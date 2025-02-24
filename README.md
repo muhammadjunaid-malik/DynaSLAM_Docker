@@ -20,10 +20,17 @@ The following command will open a docker terminal
 # Access data from/to Docker
 To move files from/to the docker just move to the ```Dataset``` folder (for example, the SLAM sequence dataset)
 
+The data set can be downloaded using the following link:
+
+```
+
+https://cvg.cit.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_walking_xyz.tgz
+
+```
 # Run DynaSLAM
 To run DynaSLAM a important note is to execute the terminal command at /root/DynaSLAM. Executions outside this folder will probably return Segmentation fault message. 
 ```
-./Examples/RGB-D/rgbd_tum Vocabulary/ORBvoc.txt Examples/RGB-D/TUM3.yaml /home/Dataset/rgbd_dataset_freiburg3_walking_xyz/ Examples/RGB-D/associations/fr3_walking_xyz.txt src/python/mask_rcnn_coco.h5
+./Examples/RGB-D/rgbd_tum Vocabulary/ORBvoc.txt Examples/RGB-D/TUM3.yaml /home/Dataset/rgbd_dataset_freiburg3_walking_xyz/ Examples/RGB-D/associations/fr3_walking_xyz.txt src/python/mask_rcnn_coco.h5 /home/DynaSLAM/output
 ```
 
 # Exit the docker
@@ -39,20 +46,20 @@ If you want to return to the docker process:
 # Kill docker process
 Outside the docker, type the following command to show all docker process running
 ```
-sudo docker ps -a
+docker ps -a
 ```
 To kill a docker: 
 ```
-sudo docker rm <CONTAINER ID> 
+docker rm <CONTAINER ID> 
 ```
 
 # Remove Docker image
 Outside the docker, type the following command to show all docker images running
 ```
-sudo docker images
+docker images
 ```
 To erase a docker image:
 ```
-sudo docker rmi <IMAGE ID>
+docker rmi <IMAGE ID>
 ```
 
